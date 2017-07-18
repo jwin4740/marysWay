@@ -1,0 +1,18 @@
+
+body {
+    background-image: url("../images/mainClouds.jpg");
+
+}
+
+.topContactContainer{
+    padding: 10px;
+    background-color: #EEEEEE;
+}
+.topContact{
+    margin-bottom: 0px;
+}
+.topIcon{
+    margin-left: 15px;
+    
+}
+
