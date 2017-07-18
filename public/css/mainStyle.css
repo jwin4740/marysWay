@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 body {
     background-image: url("../images/mainClouds.jpg");
 
@@ -13,6 +15,33 @@ body {
 }
 .topIcon{
     margin-left: 15px;
+}
+nav{
+    margin-bottom: 0px;
+}
+
+.logoTest{
+   height: 100px;
+}
+
+ 
+ .navLink{
+   padding-left: 10px;
     
+} 
+main{
+    background-color: #EEEEEE;
+}
+.mainHolder{
+   text-align: center;
+}
+
+.mainMary{
+    padding: 10px 5px 10px 5px;
+}
+
+.container{
+    background-color: white;
+    padding: 0px;
 }
 
