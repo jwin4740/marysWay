@@ -16,7 +16,7 @@
     "url": "git+https://github.com/jwin4740/marysWay.git"
   },
   "keywords": [
-    "popcorn"
+    "mary"
   ],
   "author": "James J Winkle",
   "license": "ISC",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/jwin4740/marysWay#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0"
   }
 }
