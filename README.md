@@ -1,2 +1,2 @@
 # marysWay
-marysWay from wordpress to awesome
+marysWay from wordpress to awesome!
