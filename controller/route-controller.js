@@ -12,6 +12,12 @@ router.get("/", function(req, res) {
 
 });
 
+router.get("/parishes/illinois", function(req, res) {
+
+    res.render("illinois");
+
+});
+
 
 
 

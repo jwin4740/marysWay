@@ -1,0 +1,14 @@
+ <header>
+    {{#> header-block}}  
+        {{> includes/header}} 
+    {{/header-block}}
+</header>
+ 
+ <main style='background-color: white; padding: 15px;'>
+     <p> parishes handle tests </p>
+            {{#each names}}
+  I am a {{../occupation}}. My name is {{firstName}} {{lastName}}.<br/>
+{{/each}}
+        {{> includes/parish}} 
+    
+</main>
