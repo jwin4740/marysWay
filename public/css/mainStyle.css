@@ -85,3 +85,9 @@ main {
 .subPar {
     text-align: left;
 }
+
+.parishImage {
+    width: 225px;
+    height: 160px;
+    border-radius: 2px;
+}
