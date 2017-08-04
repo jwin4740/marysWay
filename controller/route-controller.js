@@ -4,18 +4,24 @@ var express = require("express");
 var parishArray = [];
 // constructor Function for parish
 
-function Parish(state, name, priest) {
+function Parish(state, name, address, cityState, priest, founded, website, manager, phone, photoUrl) {
     this.state = state;
     this.name = name;
-    this.priest = priest;
+    this.address = address;
+    this.priest = "Pastor: " + priest;
+    this.cityState = cityState;
+    this.founded = "founded" + founded;
+    this.website = website;
+    this.manager = manager;
+    this.phone = phone;
+    this.photoUrl = photoUrl;
 
 }
 
-var parish = new Parish("Illinois", "Annunciation", "Fr Patrick");
+var parish = new Parish("Illinois", "Annunciation BVM", "1840 Church Road", "Aurora, IL", "Rev Patrick Gillmeyer", "October 2002", "http", "Trish Theriault", "(630) 236-1317", "none");;
 parishArray.push(parish);
 
-var parish = new Parish("Illinois", "HolyCross", "Fr Parker");
-parishArray.push(parish);
+
 
 
 
