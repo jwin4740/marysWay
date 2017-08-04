@@ -22,8 +22,10 @@ app.use(bodyParser.json({
 app.use(express.static(path.join(__dirname, "./public")));
 // require("./routes/api-routes.js")(app);
 // require("./routes/html-routes.js")(app);
+
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
+
 }));
 app.set('view engine', 'handlebars');
 
