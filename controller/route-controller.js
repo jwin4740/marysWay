@@ -23,9 +23,7 @@ parishArray.push(parish);
 
 
 
-db.parishes.findAll({
-   
-}).then(function (data) {
+db.parishes.findAll({}).then(function (data) {
     console.log(data);
 })
 
