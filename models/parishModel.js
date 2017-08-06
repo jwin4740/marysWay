@@ -18,11 +18,11 @@ module.exports = function (sequelize, DataTypes) {
         PRIEST: {
             type: DataTypes.STRING
         },
-        CITYSTATE: {
+        CITYSTATEZIP: {
             type: DataTypes.STRING
         },
         FOUNDED: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         WEBSITE: {
             type: DataTypes.STRING

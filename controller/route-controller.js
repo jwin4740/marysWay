@@ -4,7 +4,7 @@ var db = require("../models")
 var parishArray = [];
 // constructor Function for parish
 
-function Parish(state, name, address, cityState, priest, founded, website, manager, phone, photoUrl) {
+function Parish(state, name, address, cityStateZip, priest, founded, website, manager, phone, photoUrl) {
     this.state = state;
     this.name = name;
     this.address = address;
@@ -18,14 +18,14 @@ function Parish(state, name, address, cityState, priest, founded, website, manag
 
 }
 
-var parish = new Parish("Illinois", "Annunciation BVM", "1840 Church Road", "Aurora, IL", "Rev Patrick Gillmeyer", "October 2002", "http", "Trish Theriault", "(630) 236-1317", "none");;
-parishArray.push(parish);
 
+var sqlDataArray = [];
 
 
 db.parishes.findAll({}).then(function (data) {
     console.log(data);
-})
+});
+
 
 // setting router
 var router = express.Router();
