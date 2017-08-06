@@ -1,6 +1,6 @@
 // Requiring express
 var express = require("express");
-
+var db = require("../models")
 var parishArray = [];
 // constructor Function for parish
 
@@ -23,7 +23,9 @@ parishArray.push(parish);
 
 
 
-
+db.parishes.findAll({}).then(function (data) {
+    console.log(data);
+})
 
 // setting router
 var router = express.Router();

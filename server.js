@@ -9,7 +9,7 @@ var path = require("path");
 var app = express();
 
 var port = process.env.PORT || 8080;
-
+var db = require("./models");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
@@ -33,6 +33,10 @@ var routes = require("./controller/route-controller.js");
 app.use("/", routes);
 
 
-app.listen(port, function () {
-    console.log('server listening on port: ' + port);
+
+
+db.sequelize.sync({force: false}).then(function() {
+  app.listen(port, function() {
+    console.log("App listening on port " + port);
+  });
 });
