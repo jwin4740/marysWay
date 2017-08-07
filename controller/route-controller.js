@@ -22,7 +22,12 @@ function Parish(state, name, address, cityStateZip, priest, founded, website, ma
 var sqlDataArray = [];
 
 
-db.parishes.findAll({}).then(function (data) {
+db.parishes.findAll({
+    where: {
+        STATE: "Illinois"
+    },
+    raw: true
+}).then(function (data) {
     console.log(data);
 });
 
@@ -34,19 +39,24 @@ var router = express.Router();
 router.get("/", function (req, res) {
 
     res.render("home", {
-        helpers: {
-            foo: function () {
-                return 'fyyyyyyyyyy.';
-            }
-        }
+
     });
 
 });
 
-router.get("/parishes/illinois", function (req, res) {
-
-    res.render("illinois", {
-        illinois: parishArray
+router.get("/parishes/:state", function (req, res) {
+    var state = req.params.state;
+    var info;
+    db.parishes.findAll({
+        where: {
+            STATE: state
+        },
+        raw : true
+    }).then(function (data) {
+       info = data;
+    });
+    res.render("chapter", {
+        parish : info
     });
 
 });
