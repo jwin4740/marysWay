@@ -42,12 +42,12 @@ router.get("/", function (req, res) {
 
 });
 
-router.get("/parishes/illinois", function (req, res) {
+router.get("/parishes/:state", function (req, res) {
     var state = req.params.state;
     var info = [];
     db.parishes.findAll({
         where: {
-            STATE: "Illinois"
+            STATE: state
         },
         raw: true
     }).then(function (data) {
