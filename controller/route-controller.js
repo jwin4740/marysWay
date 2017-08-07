@@ -22,7 +22,12 @@ function Parish(state, name, address, cityStateZip, priest, founded, website, ma
 var sqlDataArray = [];
 
 
-db.parishes.findAll({}).then(function (data) {
+db.parishes.findAll({
+    where: {
+        STATE: "Illinois"
+    },
+    raw: true
+}).then(function (data) {
     console.log(data);
 });
 
@@ -33,21 +38,27 @@ var router = express.Router();
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
 
-    res.render("home", {
-        helpers: {
-            foo: function () {
-                return 'fyyyyyyyyyy.';
-            }
-        }
-    });
+    res.render("home");
 
 });
 
-router.get("/parishes/illinois", function (req, res) {
+router.get("/parishes/:state", function (req, res) {
+    var state = req.params.state;
+    var info = [];
+    db.parishes.findAll({
+        where: {
+            STATE: state
+        },
+        raw: true
+    }).then(function (data) {
 
-    res.render("illinois", {
-        illinois: parishArray
+        res.render("chapter", {
+            parish: data
+
+        });
     });
+
+
 
 });
 

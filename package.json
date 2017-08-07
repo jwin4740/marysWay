@@ -29,6 +29,7 @@
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.4.0",
+    "nodemailer": "^4.0.1",
     "sequelize": "^4.4.2"
   }
 }
