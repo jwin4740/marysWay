@@ -53,7 +53,8 @@ router.get("/parishes/:state", function (req, res) {
     }).then(function (data) {
 
         res.render("chapter", {
-            parish: data
+            parish: data,
+            state : state
 
         });
     });

@@ -35,6 +35,9 @@ module.exports = function (sequelize, DataTypes) {
         },
         PHOTOURL: {
             type: DataTypes.STRING
+        },
+        CITYSTATE: {
+            type: DataTypes.STRING
         }
     }, {
         timestamps: false,
