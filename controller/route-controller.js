@@ -38,26 +38,27 @@ var router = express.Router();
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
 
-    res.render("home", {
-
-    });
+    res.render("home");
 
 });
 
-router.get("/parishes/:state", function (req, res) {
+router.get("/parishes/illinois", function (req, res) {
     var state = req.params.state;
-    var info;
+    var info = [];
     db.parishes.findAll({
         where: {
-            STATE: state
+            STATE: "Illinois"
         },
-        raw : true
+        raw: true
     }).then(function (data) {
-       info = data;
+
+        res.render("chapter", {
+            parish: data
+
+        });
     });
-    res.render("chapter", {
-        parish : info
-    });
+
+
 
 });
 
