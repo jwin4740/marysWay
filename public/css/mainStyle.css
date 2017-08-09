@@ -19,17 +19,14 @@ body {
     margin-left: 15px;
 }
 
-nav {
-    margin-bottom: 0px;
-}
 
 .logoTest {
     height: 100px;
 }
 
-.navLink {
+/*.navLink {
     padding-left: 10px;
-}
+}*/
 
 main {
     background-color: #EEEEEE;
